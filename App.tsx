@@ -8,13 +8,6 @@ export default function App() {
     <ScrollView style={{backgroundColor: '#fefae0'}}>
       <Header />
       <Home />
-      <View>
-        <Text style={styles.textClass}>Hello World!</Text>
-        <Text style={styles.textClass}>Hello World!</Text>
-        <Text style={styles.textClass}>Hello World!</Text>
-        <Text style={styles.textClass}>Hello World!</Text>
-        <Text style={styles.textClass}>Last Text Content</Text>
-      </View>
     </ScrollView>
   );
 }
