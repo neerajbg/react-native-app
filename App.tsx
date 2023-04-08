@@ -28,6 +28,9 @@ const BalanceComp = () => {
 
   const [balance, setBalance] = useState(0);
 
+  console.log('Balance is - ', balance);
+  console.warn('Balance is - ', balance);
+
   const increment = () => {
     let newBalance = balance + 1;
 
