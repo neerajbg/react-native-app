@@ -19,7 +19,7 @@ export default function Home() {
       <View style={styles.box}>
         <View style={styles.item}>
           <Image
-            source={require('../images/image.jpg')}
+            source={require('../../images/image.jpg')}
             style={{width: 100, height: 100}}
           />
         </View>

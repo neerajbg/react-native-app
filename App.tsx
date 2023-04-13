@@ -1,7 +1,8 @@
 import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import Header from './components/common/Header';
-import Home from './components/Home';
+import Home from './components/screens/Home';
+import Contact from './components/screens/Contact';
 
 export default function App() {
   const name = 'Amit';
@@ -9,8 +10,7 @@ export default function App() {
     <ScrollView style={{backgroundColor: '#fefae0'}}>
       <Header />
       <Home />
-      <PropComp name={name} />
-      <BalanceComp />
+      <Contact />
     </ScrollView>
   );
 }
