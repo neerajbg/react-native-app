@@ -1,5 +1,6 @@
 import {
   Button,
+  ScrollView,
   StyleSheet,
   Text,
   TextComponent,
@@ -26,37 +27,39 @@ export default function Contact() {
     // Make API call to backend server
   };
   return (
-    <View style={styles.container}>
-      <Text>Contact Screen</Text>
+    <ScrollView style={{backgroundColor: '#fefae0'}}>
+      <View style={styles.container}>
+        <Text>Contact Screen</Text>
 
-      <Text style={styles.label}>Name</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Enter name"
-        onChangeText={setName}
-        value={name}
-      />
+        <Text style={styles.label}>Name</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Enter name"
+          onChangeText={setName}
+          value={name}
+        />
 
-      <Text style={styles.label}>Mobile Number</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Enter Mobile"
-        onChangeText={setMobile}
-        value={mobile}
-        keyboardType="numeric"
-      />
+        <Text style={styles.label}>Mobile Number</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Enter Mobile"
+          onChangeText={setMobile}
+          value={mobile}
+          keyboardType="numeric"
+        />
 
-      <Text style={styles.label}>Your Query</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Please provide your query"
-        onChangeText={setQuery}
-        value={query}
-        multiline
-        numberOfLines={5}
-      />
-      <Button title="Send" color="red" onPress={submitForm} />
-    </View>
+        <Text style={styles.label}>Your Query</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Please provide your query"
+          onChangeText={setQuery}
+          value={query}
+          multiline
+          numberOfLines={5}
+        />
+        <Button title="Send" color="red" onPress={submitForm} />
+      </View>
+    </ScrollView>
   );
 }
 

@@ -4,14 +4,20 @@ import Header from './components/common/Header';
 import Home from './components/screens/Home';
 import Contact from './components/screens/Contact';
 
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
 export default function App() {
   const name = 'Amit';
   return (
-    <ScrollView style={{backgroundColor: '#fefae0'}}>
-      <Header />
-      <Home />
-      <Contact />
-    </ScrollView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Contact" component={Contact} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

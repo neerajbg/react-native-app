@@ -1,9 +1,9 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-export default function Home() {
+export default function Home({navigation}) {
   return (
-    <>
+    <ScrollView style={{backgroundColor: '#fefae0'}}>
       <View style={styles.container}>
         <View style={[styles.card, styles.one]}>
           <Text style={styles.textClass}>Home</Text>
@@ -12,7 +12,11 @@ export default function Home() {
           <Text style={styles.textClass}>About Us</Text>
         </View>
         <View style={[styles.card, styles.three]}>
-          <Text style={styles.textClass}>Contact Us</Text>
+          <Text
+            style={styles.textClass}
+            onPress={() => navigation.navigate('Contact')}>
+            Contact Us
+          </Text>
         </View>
       </View>
 
@@ -32,7 +36,7 @@ export default function Home() {
           <Text style={styles.boxItemText}>Web and Mobile Developer</Text>
         </View>
       </View>
-    </>
+    </ScrollView>
   );
 }
 
