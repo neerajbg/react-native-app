@@ -9,7 +9,13 @@ export default function Home({navigation}) {
           <Text style={styles.textClass}>Home</Text>
         </View>
         <View style={[styles.card, styles.two]}>
-          <Text style={styles.textClass}>About Us</Text>
+          <Text
+            style={styles.textClass}
+            onPress={() =>
+              navigation.navigate('About', {id: 123, name: 'Neeraj Avinash'})
+            }>
+            About Us
+          </Text>
         </View>
         <View style={[styles.card, styles.three]}>
           <Text

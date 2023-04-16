@@ -6,6 +6,7 @@ import Contact from './components/screens/Contact';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import About from './components/screens/About';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,11 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Contact" component={Contact} />
+        <Stack.Screen
+          name="About"
+          component={About}
+          options={{title: 'This is About Screen'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
