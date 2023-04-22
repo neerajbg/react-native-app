@@ -1,4 +1,12 @@
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Button,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  Linking,
+} from 'react-native';
 import React from 'react';
 
 export default function Home({navigation}) {
@@ -41,6 +49,14 @@ export default function Home({navigation}) {
           <Text style={styles.boxItemText}>Fullstack Developer</Text>
           <Text style={styles.boxItemText}>Web and Mobile Developer</Text>
         </View>
+      </View>
+      <View style={{margin: 8}}>
+        <Button
+          title="Open Me"
+          onPress={() => {
+            Linking.openURL('https://growyourskill.in');
+          }}
+        />
       </View>
     </ScrollView>
   );
