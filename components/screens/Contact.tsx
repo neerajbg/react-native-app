@@ -10,6 +10,8 @@ import {
 import React, {useState} from 'react';
 import axios from 'axios';
 
+import {API_HOST} from '@env';
+
 export default function Contact() {
   const [name, setName] = useState('');
   const [mobile, setMobile] = useState('');
@@ -24,7 +26,7 @@ export default function Contact() {
     };
 
     // Make API call to backend server
-    const apiUrl = 'http://10.0.2.2:8080/contact';
+    const apiUrl = `${API_HOST}/contact`;
     try {
       const response = await axios.post(apiUrl, formData);
 
