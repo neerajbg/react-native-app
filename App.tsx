@@ -8,13 +8,18 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import About from './components/screens/About';
 
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Setting from './components/screens/Setting';
+
+const Tab = createBottomTabNavigator();
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   const name = 'Amit';
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      {/* <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Contact" component={Contact} />
         <Stack.Screen
@@ -22,11 +27,26 @@ export default function App() {
           component={About}
           options={{title: 'This is About Screen'}}
         />
-      </Stack.Navigator>
+      </Stack.Navigator> */}
+      <MyTab />
     </NavigationContainer>
   );
 }
 
+const MyTab = () => {
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        tabBarStyle: {position: 'absolute'},
+        tabBarActiveTintColor: 'red',
+        tabBarLabelStyle: {fontSize: 20},
+      }}>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Setting" component={Setting} />
+      <Tab.Screen name="Contact" component={Contact} />
+    </Tab.Navigator>
+  );
+};
 const PropComp = (props: any) => {
   return (
     <View>
