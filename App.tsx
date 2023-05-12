@@ -8,10 +8,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import About from './components/screens/About';
 
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Setting from './components/screens/Setting';
 
-const Tab = createBottomTabNavigator();
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+const Tab = createMaterialTopTabNavigator();
 
 const Stack = createNativeStackNavigator();
 
@@ -37,8 +37,8 @@ const MyTab = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarStyle: {position: 'absolute'},
-        tabBarActiveTintColor: 'red',
+        tabBarStyle: {position: 'relative'},
+        tabBarActiveTintColor: 'black',
         tabBarLabelStyle: {fontSize: 20},
       }}>
       <Tab.Screen name="Home" component={Home} />
